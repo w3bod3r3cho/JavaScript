@@ -6,6 +6,7 @@
   let:    Vive dentro del bloque declarado      <Ej0001>.
   const:  Se usa para definir constantes
 */
+
 console.log('============================= 1 Declaración de Variable =============================')
 
 //  <Ej0001>
@@ -46,6 +47,7 @@ function letTest () {
     El tipo será determinado automáticamente cuando el programa comience a ser procesado. 
     Esto también significa que puedes tener la misma variable con diferentes tipos:
 */
+
 console.log('============================= 2 Tipos de Variables =============================')
 
 var foo = 42 // foo es ahora un Number
@@ -111,6 +113,7 @@ console.log('length: ' + String(foo).length)
 // ///////////////////////
 
 console.log('============================= 4 Templates Literal =============================')
+
 const producto1 = 'Pizza',
   precio1 = 30,
   producto2 = 'Hamburguesa',
@@ -131,3 +134,62 @@ function total (p1, p2) {
 }
 
 document.getElementById('html').innerHTML = html
+
+// //////////////
+//  5 Arreglos //
+// //////////////
+
+console.log('============================= 5 Arreglos =============================')
+
+const numeros = [10, 5, 4, 8, 6, 45.132, 24, 231]
+console.log(numeros)
+const mes = new Array();
+console.log(typeof mes)
+const meses = new Array('enero', 'febrero', 'marzo');
+console.log(meses)
+const mezcla = new Array('enero', true, 'febrero', 10, 12.31414, undefined, 'marzo');
+console.log(mezcla)
+//  Algunos Metodos
+console.log(Array.isArray(meses))
+console.log(meses.length)
+console.log(meses[1])
+//  Añadir un Elemento al Arrego
+meses.push('abril')
+console.log(meses)
+//  Añadir al inicio del Arreglo
+meses.unshift('Mes 0')
+console.log(meses)
+//  Eliminar el ultimo Elemento del Arrego
+meses.pop()
+console.log(meses)
+//  Eliminar el Elemento del Inicio del Arreglo
+meses.shift()
+console.log(meses)
+//  Eliminar un Elemento del Arreglo
+meses.splice(2, 1);
+console.log(meses)
+//  Revertur el orden del Arreglo
+meses.reverse()
+console.log(meses)
+//  Unir Arreglos
+let meses2 = ['mayo', 'junio', 10.432, false]
+console.log(meses.concat(meses2))
+console.log(meses)
+//  Ordenar un Arreglo con letas
+let frutas = ['Platano', 'Fresa', 'Manzana', 'Sandia']
+frutas.sort()
+console.log(frutas)
+//  Ordenar un Arreglo con numeros
+console.log(numeros)
+numeros.sort()
+console.log(numeros)
+numeros.sort(function(x, y) {
+  return x - y
+})
+console.log(numeros)
+numeros.sort(function(x, y) {
+  return y - x
+})
+console.log(numeros)
+// Buscar un Elemento
+console.log(meses.indexOf('marzo'))
