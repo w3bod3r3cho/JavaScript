@@ -108,9 +108,9 @@ console.log(String(foo))
 console.log('length: ' + String(foo).length)
 */
 
-// ///////////////////////
-//  4 Templates Literal //
-// ///////////////////////
+// ////////////////////////
+//  4 Templates Literal  //
+// ////////////////////////
 
 console.log('============================= 4 Templates Literal =============================')
 
@@ -135,61 +135,128 @@ function total (p1, p2) {
 
 document.getElementById('html').innerHTML = html
 
-// //////////////
-//  5 Arreglos //
-// //////////////
+// ///////////////
+//  5 Arreglos  //
+// ///////////////
 
 console.log('============================= 5 Arreglos =============================')
 
 const numeros = [10, 5, 4, 8, 6, 45.132, 24, 231]
-console.log(numeros)
+//  console.log(numeros)
 const mes = new Array();
-console.log(typeof mes)
+//  console.log(typeof mes)
 const meses = new Array('enero', 'febrero', 'marzo');
-console.log(meses)
+//  console.log(meses)
 const mezcla = new Array('enero', true, 'febrero', 10, 12.31414, undefined, 'marzo');
-console.log(mezcla)
+//  console.log(mezcla)
 //  Algunos Metodos
-console.log(Array.isArray(meses))
-console.log(meses.length)
-console.log(meses[1])
+//  console.log(Array.isArray(meses))
+//  console.log(meses.length)
+//  console.log(meses[1])
 //  Añadir un Elemento al Arrego
 meses.push('abril')
-console.log(meses)
+//  console.log(meses)
 //  Añadir al inicio del Arreglo
 meses.unshift('Mes 0')
-console.log(meses)
+//  console.log(meses)
 //  Eliminar el ultimo Elemento del Arrego
 meses.pop()
-console.log(meses)
+//  console.log(meses)
 //  Eliminar el Elemento del Inicio del Arreglo
 meses.shift()
-console.log(meses)
+//  console.log(meses)
 //  Eliminar un Elemento del Arreglo
 meses.splice(2, 1);
-console.log(meses)
+//  console.log(meses)
 //  Revertur el orden del Arreglo
 meses.reverse()
-console.log(meses)
+//  console.log(meses)
 //  Unir Arreglos
 let meses2 = ['mayo', 'junio', 10.432, false]
-console.log(meses.concat(meses2))
-console.log(meses)
+//  console.log(meses.concat(meses2))
+//  console.log(meses)
 //  Ordenar un Arreglo con letas
 let frutas = ['Platano', 'Fresa', 'Manzana', 'Sandia']
 frutas.sort()
-console.log(frutas)
+//  console.log(frutas)
 //  Ordenar un Arreglo con numeros
-console.log(numeros)
+//  console.log(numeros)
 numeros.sort()
-console.log(numeros)
+//  console.log(numeros)
 numeros.sort(function(x, y) {
   return x - y
 })
-console.log(numeros)
+//  console.log(numeros)
 numeros.sort(function(x, y) {
   return y - x
 })
-console.log(numeros)
-// Buscar un Elemento
-console.log(meses.indexOf('marzo'))
+//  console.log(numeros)
+//  Buscar un Elemento
+//  console.log(meses.indexOf('marzo'))
+
+// ///////////////////////////////////////////////
+//  6 La Variable Const en Objectos y Arreglos  //
+// ///////////////////////////////////////////////
+
+console.log('============================= 6 La Variable Const en Objectos y Arreglos =============================')
+
+const numbers = [1, 2, 3]
+//  No puede ser reasignado el arreglo ya que es una constante
+//  numbers = [4, 5, 6]
+//  Pero si se pueden modificar su valor individual
+numbers[0] = 4;
+//  Se puede aplicar tambien todos los metodos vistos en 5 Arreglos
+numbers.push(5)
+//  console.log(numbers)
+
+// ///////////////
+//  7 Objectos  //
+// ///////////////
+
+console.log('============================= 7 Objectos =============================')
+
+//  Crear Objeto
+const person = {
+  id: 1,
+  nombre: 'Victor Leon',
+  edad:30,
+  profesion: 'Programador',
+  sueldo: 16000.50,
+  empleados: ['Jesus Varguez', 'Luis Ruiz', 'Carlos May'],
+  estado: true,
+  ubicacion: {
+    municipio: 'Merida',
+    estado: 'Yucatan'  
+  },
+  fechaNacimiento: function() {
+    return new Date().getFullYear() - this.edad 
+  }
+}
+/*
+console.log(person)
+console.log(person.id)
+console.log(person.ubicacion.municipio)
+console.log(person.fechaNacimiento())
+*/
+// ///////////////////////////////////
+//  8 Creando Arreglos de Objectos  //
+// ///////////////////////////////////
+
+console.log('============================= 8 Creando Arreglos de Objectos =============================')
+
+//  Aplican las mismas reglas para Var Let y Const
+const cars = [
+  {modelo: 'Mustang', motor: 6.0},
+  {modelo: 'Dodge', motor: 3.0},
+  {modelo: 'Nissan', motor: 4.0},
+  {modelo: 'Ford', motor: 6.0},
+]
+console.log(cars)
+
+for(var i = 0; i < cars.length; i++) {
+  console.log(cars[i].modelo)
+}
+
+cars.forEach(element => {
+  console.log(element)
+});
