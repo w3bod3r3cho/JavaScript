@@ -143,11 +143,11 @@ console.log('============================= 5 Arreglos ==========================
 
 const numeros = [10, 5, 4, 8, 6, 45.132, 24, 231]
 //  console.log(numeros)
-const mes = new Array();
+const mes = []
 //  console.log(typeof mes)
-const meses = new Array('enero', 'febrero', 'marzo');
+const meses = new Array('enero', 'febrero', 'marzo')
 //  console.log(meses)
-const mezcla = new Array('enero', true, 'febrero', 10, 12.31414, undefined, 'marzo');
+const mezcla = new Array('enero', true, 'febrero', 10, 12.31414, undefined, 'marzo')
 //  console.log(mezcla)
 //  Algunos Metodos
 //  console.log(Array.isArray(meses))
@@ -166,7 +166,7 @@ meses.pop()
 meses.shift()
 //  console.log(meses)
 //  Eliminar un Elemento del Arreglo
-meses.splice(2, 1);
+meses.splice(2, 1)
 //  console.log(meses)
 //  Revertur el orden del Arreglo
 meses.reverse()
@@ -183,11 +183,11 @@ frutas.sort()
 //  console.log(numeros)
 numeros.sort()
 //  console.log(numeros)
-numeros.sort(function(x, y) {
+numeros.sort(function (x, y) {
   return x - y
 })
 //  console.log(numeros)
-numeros.sort(function(x, y) {
+numeros.sort(function (x, y) {
   return y - x
 })
 //  console.log(numeros)
@@ -204,7 +204,7 @@ const numbers = [1, 2, 3]
 //  No puede ser reasignado el arreglo ya que es una constante
 //  numbers = [4, 5, 6]
 //  Pero si se pueden modificar su valor individual
-numbers[0] = 4;
+numbers[0] = 4
 //  Se puede aplicar tambien todos los metodos vistos en 5 Arreglos
 numbers.push(5)
 //  console.log(numbers)
@@ -219,17 +219,17 @@ console.log('============================= 7 Objectos ==========================
 const person = {
   id: 1,
   nombre: 'Victor Leon',
-  edad:30,
+  edad: 30,
   profesion: 'Programador',
   sueldo: 16000.50,
   empleados: ['Jesus Varguez', 'Luis Ruiz', 'Carlos May'],
   estado: true,
   ubicacion: {
     municipio: 'Merida',
-    estado: 'Yucatan'  
+    estado: 'Yucatan'
   },
-  fechaNacimiento: function() {
-    return new Date().getFullYear() - this.edad 
+  fechaNacimiento: function () {
+    return new Date().getFullYear() - this.edad
   }
 }
 /*
@@ -249,14 +249,43 @@ const cars = [
   {modelo: 'Mustang', motor: 6.0},
   {modelo: 'Dodge', motor: 3.0},
   {modelo: 'Nissan', motor: 4.0},
-  {modelo: 'Ford', motor: 6.0},
+  {modelo: 'Ford', motor: 6.0}
 ]
+/*
 console.log(cars)
 
-for(var i = 0; i < cars.length; i++) {
+for (var i = 0; i < cars.length; i++) {
   console.log(cars[i].modelo)
 }
 
 cars.forEach(element => {
   console.log(element)
-});
+})
+*/
+// //////////////////////////////
+//  9 Funciones en Javascript  //
+// //////////////////////////////
+
+console.log('============================= 9 Funciones en Javascript =============================')
+
+//  Funciones Declaradas
+
+function sumar (a, b) {
+  return a + b
+}
+console.log('La suma es: ' + sumar(1, 9))
+
+//  Funciones de Expresion
+
+const suma = function (a, b) {
+  return a + b
+}
+console.log('La suma es: ' + suma(1, 8))
+
+let v_suma = function (a, b) {
+  sumar(a, b)
+}
+console.log('La suma es: ' + v_suma(1, 7))
+
+v_suma = suma
+console.log('La suma es: ' + v_suma(1, 6))
