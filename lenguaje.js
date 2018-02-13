@@ -11,27 +11,27 @@ console.log('============================= 1 Declaración de Variable ==========
 
 //  <Ej0001>
 function varTest () {
-  var x = 31;
+  var x = 31
   if (true) {
     var x = 71; // ¡misma variable!
-    console.log('var:');
-    console.log(x); // 71
+    console.log('var:')
+    console.log(x) // 71
   }
-  console.log(x); // 71
-};
+  console.log(x) // 71
+}
 
 function letTest () {
-  let x = 31;
+  let x = 31
   if (true) {
-    let x = 71; // variable diferente
-    console.log('let:');
-    console.log(x); // 71
+    let x = 71 // variable diferente
+    console.log('let:')
+    console.log(x) // 71
   }
-  console.log(x); // 31
-};
+  console.log(x) // 31
+}
 
-//  varTest();  //  Descomentar para ejecutar el elemplo
-//  letTest();  //  Descomentar para ejecutar el elemplo
+//  varTest()  //  Descomentar para ejecutar el elemplo
+//  letTest()  //  Descomentar para ejecutar el elemplo
 
 //  </Ej0001>
 
@@ -48,76 +48,76 @@ function letTest () {
     Esto también significa que puedes tener la misma variable con diferentes tipos:
 */
 
-console.log('============================= 2 Tipos de Variables =============================');
+console.log('============================= 2 Tipos de Variables =============================')
 
-var foo = 42; // foo es ahora un Number
-var foo = 'bar'; // foo es ahora un String
-var foo = true; // foo es ahora un Boolean
+var foo = 42 // foo es ahora un Number
+var foo = 'bar' // foo es ahora un String
+var foo = true // foo es ahora un Boolean
 
 //  Tipos de datos
 
 //  La última definición del estándar ECMAScript define siete tipos de datos: 
 
 //  Seis tipos de datos que son primitives:
-var foo = true; //  Boolean
-//  console.log(foo);
-var foo = null; //  Null
-//  console.log(foo);
-var foo = undefined; //  Undefined
-//  console.log(foo);
-var foo = 1; //  Number
-//  console.log(foo);
-var foo = 'cadena'; //  String
-//  console.log(foo);
+var foo = true //  Boolean
+//  console.log(foo)
+var foo = null //  Null
+//  console.log(foo)
+var foo = undefined //  Undefined
+//  console.log(foo)
+var foo = 1 //  Number
+//  console.log(foo)
+var foo = 'cadena' //  String
+//  console.log(foo)
 var foo = Symbol('foo'); //  Symbol (nuevo en ECMAScript 6)
-//  console.log(foo);
+//  console.log(foo)
 
 //  Object
-var foo = {};
-//  console.log(foo);
+var foo = {}
+//  console.log(foo)
 //  Array
-var foo = [1, 2, 3];
-//  console.log(foo);
+var foo = [1, 2, 3]
+//  console.log(foo)
 
 // ///////////////////////////////
 //  3 Conversiones entre Tipos  //
 // ///////////////////////////////
 
-console.log('============================= 3 Conversiones entre Tipos =============================');
+console.log('============================= 3 Conversiones entre Tipos =============================')
 
-var foo = '50';
-//  console.log(typeof Number(foo));
-//  console.log(Number(foo));
+var foo = '50'
+//  console.log(typeof Number(foo))
+//  console.log(Number(foo))
 
 //  parseFloat, parseInt
-foo = '20.1093265';
+foo = '20.1093265'
 /*
-console.log('parseFloat');
-console.log(typeof parseFloat(foo));
-console.log(parseFloat(foo));
-console.log(typeof parseFloat(foo).toFixed(3));
-console.log(parseFloat(foo).toFixed(3));
-console.log('parseInt');
-console.log(typeof parseInt(foo));
-console.log(parseInt(foo));
+console.log('parseFloat')
+console.log(typeof parseFloat(foo))
+console.log(parseFloat(foo))
+console.log(typeof parseFloat(foo).toFixed(3))
+console.log(parseFloat(foo).toFixed(3))
+console.log('parseInt')
+console.log(typeof parseInt(foo))
+console.log(parseInt(foo))
 */
 //  String
 /*
-console.log('String');
-console.log(String(foo));
-console.log('length: ' + String(foo).length);
+console.log('String')
+console.log(String(foo))
+console.log('length: ' + String(foo).length)
 */
 
 // ////////////////////////
 //  4 Templates Literal  //
 // ////////////////////////
 
-console.log('============================= 4 Templates Literal =============================');
+console.log('============================= 4 Templates Literal =============================')
 
 const producto1 = 'Pizza',
   precio1 = 30,
   producto2 = 'Hamburguesa',
-  precio2 = 40;
+  precio2 = 40
 
 var html =
 `
@@ -128,92 +128,92 @@ var html =
         <li>Precio: ${precio2}</li>
         <li>Total: ${total(precio1, precio2)}</li>
     </ul>
-`;
+`
 function total (p1, p2) {
-  return p1 + p2;
+  return p1 + p2
 }
 
-document.getElementById('html').innerHTML = html;
+document.getElementById('html').innerHTML = html
 
 // ///////////////
 //  5 Arreglos  //
 // ///////////////
 
-console.log('============================= 5 Arreglos =============================');
+console.log('============================= 5 Arreglos =============================')
 
-const numeros = [10, 5, 4, 8, 6, 45.132, 24, 231];
-//  console.log(numeros);
-const mes = [];
-//  console.log(typeof mes);
-const meses = new Array('enero', 'febrero', 'marzo');
-//  console.log(meses);
-const mezcla = new Array('enero', true, 'febrero', 10, 12.31414, undefined, 'marzo');
-//  console.log(mezcla);
+const numeros = [10, 5, 4, 8, 6, 45.132, 24, 231]
+//  console.log(numeros)
+const mes = []
+//  console.log(typeof mes)
+const meses = new Array('enero', 'febrero', 'marzo')
+//  console.log(meses)
+const mezcla = new Array('enero', true, 'febrero', 10, 12.31414, undefined, 'marzo')
+//  console.log(mezcla)
 //  Algunos Metodos
-//  console.log(Array.isArray(meses));
-//  console.log(meses.length);
-//  console.log(meses[1]);
+//  console.log(Array.isArray(meses))
+//  console.log(meses.length)
+//  console.log(meses[1])
 //  Añadir un Elemento al Arrego
-meses.push('abril');
-//  console.log(meses);
+meses.push('abril')
+//  console.log(meses)
 //  Añadir al inicio del Arreglo
-meses.unshift('Mes 0');
-//  console.log(meses);
+meses.unshift('Mes 0')
+//  console.log(meses)
 //  Eliminar el ultimo Elemento del Arrego
-meses.pop();
-//  console.log(meses);
+meses.pop()
+//  console.log(meses)
 //  Eliminar el Elemento del Inicio del Arreglo
-meses.shift();
-//  console.log(meses);
+meses.shift()
+//  console.log(meses)
 //  Eliminar un Elemento del Arreglo
-meses.splice(2, 1);
-//  console.log(meses);
+meses.splice(2, 1)
+//  console.log(meses)
 //  Revertur el orden del Arreglo
-meses.reverse();
-//  console.log(meses);
+meses.reverse()
+//  console.log(meses)
 //  Unir Arreglos
-let meses2 = ['mayo', 'junio', 10.432, false];
-//  console.log(meses.concat(meses2));
-//  console.log(meses);
+let meses2 = ['mayo', 'junio', 10.432, false]
+//  console.log(meses.concat(meses2))
+//  console.log(meses)
 //  Ordenar un Arreglo con letas
-let frutas = ['Platano', 'Fresa', 'Manzana', 'Sandia'];
-frutas.sort();
-//  console.log(frutas);
-//  Ordenar un Arreglo con numeros;
-//  console.log(numeros);
-numeros.sort();
-//  console.log(numeros);
+let frutas = ['Platano', 'Fresa', 'Manzana', 'Sandia']
+frutas.sort()
+//  console.log(frutas)
+//  Ordenar un Arreglo con numeros
+//  console.log(numeros)
+numeros.sort()
+//  console.log(numeros)
 numeros.sort(function (x, y) {
-  return x - y;
-});
-//  console.log(numeros);
+  return x - y
+})
+//  console.log(numeros)
 numeros.sort(function (x, y) {
-  return y - x;
-});
-//  console.log(numeros);
-//  Buscar un Elemento;
-//  console.log(meses.indexOf('marzo'));
+  return y - x
+})
+//  console.log(numeros)
+//  Buscar un Elemento
+//  console.log(meses.indexOf('marzo'))
 
 // ///////////////////////////////////////////////
 //  6 La Variable Const en Objectos y Arreglos  //
 // ///////////////////////////////////////////////
 
-console.log('============================= 6 La Variable Const en Objectos y Arreglos =============================');
+console.log('============================= 6 La Variable Const en Objectos y Arreglos =============================')
 
-const numbers = [1, 2, 3];
+const numbers = [1, 2, 3]
 //  No puede ser reasignado el arreglo ya que es una constante
 //  numbers = [4, 5, 6]
 //  Pero si se pueden modificar su valor individual
-numbers[0] = 4;
+numbers[0] = 4
 //  Se puede aplicar tambien todos los metodos vistos en 5 Arreglos
-numbers.push(5);
-//  console.log(numbers);
+numbers.push(5)
+//  console.log(numbers)
 
 // ///////////////
 //  7 Objectos  //
 // ///////////////
 
-console.log('============================= 7 Objectos =============================');
+console.log('============================= 7 Objectos =============================')
 
 //  Crear Objeto
 const person = {
@@ -229,21 +229,21 @@ const person = {
     estado: 'Yucatan'
   },
   fechaNacimiento: function () {
-    return new Date().getFullYear() - this.edad;
+    return new Date().getFullYear() - this.edad
   }
-};
+}
 /*
-console.log(person);
-console.log(person.id);
-console.log(person.ubicacion.municipio);
-console.log(person.fechaNacimiento());
+console.log(person)
+console.log(person.id)
+console.log(person.ubicacion.municipio)
+console.log(person.fechaNacimiento())
 */
 
 // ///////////////////////////////////
 //  8 Creando Arreglos de Objectos  //
 // ///////////////////////////////////
 
-console.log('============================= 8 Creando Arreglos de Objectos =============================');
+console.log('============================= 8 Creando Arreglos de Objectos =============================')
 
 //  Aplican las mismas reglas para Var Let y Const
 const cars = [
@@ -251,16 +251,16 @@ const cars = [
   {modelo: 'Dodge', motor: 3.0},
   {modelo: 'Nissan', motor: 4.0},
   {modelo: 'Ford', motor: 6.0}
-];
+]
 /*
-console.log(cars);
+console.log(cars)
 
 for (var i = 0; i < cars.length; i++) {
-  console.log(cars[i].modelo);
+  console.log(cars[i].modelo)
 }
 
 cars.forEach(element => {
-  console.log(element);
+  console.log(element)
 })
 */
 
@@ -268,126 +268,126 @@ cars.forEach(element => {
 //  9 Funciones en Javascript  //
 // //////////////////////////////
 
-console.log('============================= 9 Funciones en Javascript =============================');
+console.log('============================= 9 Funciones en Javascript =============================')
 
 //  Funciones Declaradas
 function sumar (a, b) {
-  return a + b;
+  return a + b
 }
-//  console.log('La suma es: ' + sumar(1, 9));
+//  console.log('La suma es: ' + sumar(1, 9))
 
 //  Funciones de Expresion
 const suma = function (a, b) {
-  return a + b;
+  return a + b
 }
-//  console.log('La suma es: ' + suma(1, 8));
+//  console.log('La suma es: ' + suma(1, 8))
 
 let v_suma = function (a, b) {
-  sumar(a, b);
+  sumar(a, b)
 }
-//  console.log('La suma es: ' + v_suma(1, 7));
+//  console.log('La suma es: ' + v_suma(1, 7))
 
-v_suma = suma;
-//  console.log('La suma es: ' + v_suma(1, 6));
+v_suma = suma
+//  console.log('La suma es: ' + v_suma(1, 6))
 
 //  Funciones   IIFE
-(function (tecnologia) {
-  //  console.log(`Aprendiendo ${tecnologia}`);
-})('JavaScript');
+;(function (tecnologia) {
+  //  console.log(`Aprendiendo ${tecnologia}`)
+})('JavaScript')
 
 //  Metodos de Propiedad
 //  Sun cuando una Funcion se pone dentro de un Objecto (Metodos)
 const music = {
   reproducir: function (id) {
-    console.log(`Reproducir música id: ${id}`);
+    console.log(`Reproducir música id: ${id}`)
   },
   pausar: function () {
-    console.log('Pausar musica');
+    console.log('Pausar musica')
   }
-};
+}
 //  Los Metodos tambien pueden crearse / guardarse fuera del Objecto
 music.borrar = function (id) {
-  console.log(`Borrando la cancion con id: ${id}`);  
-};
-//  music.reproducir(30);
-//  music.pausar();
-//  music.borrar(30);
+  console.log(`Borrando la cancion con id: ${id}`)
+}
+//  music.reproducir(30)
+//  music.pausar()
+//  music.borrar(30)
 
 // /////////////////////////////////////////////
 //  10 Manejando los errores con Try y Catch  //
 // /////////////////////////////////////////////
 
-console.log('============================= 10 Manejando los errores con Try y Catch =============================');
+console.log('============================= 10 Manejando los errores con Try y Catch =============================')
 
 //  Funcion que no existe ejemplo
 /*
 try {
-  algo();
+  algo()
 }
 catch {
-  console.log('Error la Funcion no existe');
+  console.log('Error la Funcion no existe')
 }
 finally {
-  console.log('Se ejectuta este proceso de todos modos');
+  console.log('Se ejectuta este proceso de todos modos')
 }
 
-pruebaTry();
+pruebaTry()
 */
 
-function pruebaTry(){
-  console.log('Descargando...');
+function pruebaTry () {
+  console.log('Descargando...')
   setTimeout(function () {
-    console.log('Completa...');
-  }, 3000);
-};
+    console.log('Completa...')
+  }, 3000)
+}
 
 // ////////////////////////////
 //  11 Fechas en Javascript  //
 // ////////////////////////////
 
-console.log('============================= 11 Fechas en Javascript =============================');
+console.log('============================= 11 Fechas en Javascript =============================')
 
-const diaHoy = new Date();
-//  console.log(diaHoy);
-let navidad = new Date('2017-12-25');
-//  console.log(navidad);
+const diaHoy = new Date()
+//  console.log(diaHoy)
+let navidad = new Date('2017-12-25')
+//  console.log(navidad)
 //  Año
-//  console.log(diaHoy.getFullYear());
+//  console.log(diaHoy.getFullYear())
 //  Mes es como un array Enero = 0
-//  console.log(diaHoy.getMonth());
+//  console.log(diaHoy.getMonth())
 //  Dia
-//  console.log(diaHoy.getDate());
+//  console.log(diaHoy.getDate())
 //  Hora
-//  console.log(diaHoy.getHours());
+//  console.log(diaHoy.getHours())
 //  Minutos
-//  console.log(diaHoy.getMinutes());
+//  console.log(diaHoy.getMinutes())
 //  Milisegundos desde 1970
-//  console.log(diaHoy.getTime());
+//  console.log(diaHoy.getTime())
 //  Modificar el Año
-diaHoy.setFullYear(2020);
-//  console.log(diaHoy);
+diaHoy.setFullYear(2020)
+//  console.log(diaHoy)
 
 // ///////////////////////////////////////////////
 //  12  Estructuras de Control, IF ELSE ELSEIF  //
 // ///////////////////////////////////////////////
 
-console.log('============================= 12  Estructuras de Control, IF ELSE ELSEIF =============================');
+console.log('============================= 12  Estructuras de Control, IF ELSE ELSEIF =============================')
 /*
 if (10 > 18) {
-  console.log('IF');
+  console.log('IF')
 }
 else {
-  console.log('ELSE');
+  console.log('ELSE')
 }
 
 if (10 > 18) {
-  console.log('IF');
+  console.log('IF')
 }
 else if (10 > 2) {
-  console.log('ELSEIF');
+  console.log('ELSEIF')
 }
 else {
-  console.log('ELSE');
+  console.log('ELSE')
 }
 */
 
@@ -395,23 +395,23 @@ else {
 //  13  Switch en Javascript  //
 // /////////////////////////////
 
-console.log('============================= 13  Switch en Javascript =============================');
+console.log('============================= 13  Switch en Javascript =============================')
 
-let mPago = 'Efectivo';
+let mPago = 'Efectivo'
 /*
 switch (mPago) {
   case 'Efectivo':
-    console.log(`El Cliente pago en ${mPago}`);
-    break;
+    console.log(`El Cliente pago en ${mPago}`)
+    break
   case 'Tarjeta':
-    console.log(`El Cliente pago en ${mPago}`);
-    break;
+    console.log(`El Cliente pago en ${mPago}`)
+    break
   case 'Cheque':
-    console.log(`El Cliente pago en ${mPago}`);
-    break;
+    console.log(`El Cliente pago en ${mPago}`)
+    break
   default:
-    console.log('El Metodo de Pago no es Soportado');
-    break;
+    console.log('El Metodo de Pago no es Soportado')
+    break
 }
 */
 
@@ -419,33 +419,33 @@ switch (mPago) {
 //  14  Iteraciones For Loop  //
 // /////////////////////////////
 
-console.log('============================= 14  Iteraciones For Loop =============================');
+console.log('============================= 14  Iteraciones For Loop =============================')
 /*
 for (let idx = 0; idx < 5; idx++) {
   if (idx === 5) {
-    console.log('Voy en el 5');
-    continue;
+    console.log('Voy en el 5')
+    continue
   }
   if (idx === 6) {
-    console.log('Voy en el 5');
-    break;
+    console.log('Voy en el 5')
+    break
   }
-  console.log(idx);
+  console.log(idx)
 }
 
 for (let idx = 0; idx < 10; idx++) {
   if (idx % 2 == 0) {
-    console.log('par');
+    console.log('par')
   }
   else {
-    console.log('inpar');
+    console.log('inpar')
   }
 }
 
-let arrProducto = ['Camisa', 'Pantalon', 'Short', 'Calcetines', 'Zapatos'];
+let arrProducto = ['Camisa', 'Pantalon', 'Short', 'Calcetines', 'Zapatos']
 
 for (let i = 0; i < arrProducto.length; i++) {
-  console.log(`Se agrego el Producto ${arrProducto[i]} al Carrito`);
+  console.log(`Se agrego el Producto ${arrProducto[i]} al Carrito`)
 }
 */
 
@@ -453,67 +453,135 @@ for (let i = 0; i < arrProducto.length; i++) {
 //  15  While y Do While Loop  //
 // //////////////////////////////
 
-console.log('============================= 15  While y Do While Loop =============================');
+console.log('============================= 15  While y Do While Loop =============================')
 
-let i = 0;
+let i = 0
 /*
 while (i < 10) {
-  console.log(`Numero: ${i}`);
+  console.log(`Numero: ${i}`)
 
   if (i == 5) {
-    console.log('Voy en el 5');
-    i++;
-    continue;
+    console.log('Voy en el 5')
+    i++
+    continue
   }
   if (i == 6) {
-    console.log('Voy en el 6');
-    break;
+    console.log('Voy en el 6')
+    break
   }
 
-  i++;
+  i++
 }
 
-i = 0;
+i = 0
 
 do {
-  console.log(`Numero: ${i}`);
-  i++;
+  console.log(`Numero: ${i}`)
+  i++
 } 
-while (i < 10);
+while (i < 10)
 */
 
 // //////////////////////////////////
 //  16  forEach, Map e Iteradores  //
 // //////////////////////////////////
 
-console.log('============================= 16  forEach, Map e Iteradores =============================');
-
-let pendientes = ['Tarea', 'Comer', 'Dormir', 'Trabajar', 'Gym'];
+console.log('============================= 16  forEach, Map e Iteradores =============================')
+/*
+let pendientes = ['Tarea', 'Comer', 'Dormir', 'Trabajar', 'Gym']
 
 pendientes.forEach(function (pendientes, index) {
-  console.log(`${index} : ${pendientes}`);
-});
+  console.log(`${index} : ${pendientes}`)
+})
 
 let cestoCompra = [
   {id: 1, producto: 'Producto 1'},
   {id: 2, producto: 'Producto 2'},
   {id: 3, producto: 'Producto 3'},
-  {id: 4, producto: 'Producto 4'},
-];
+  {id: 4, producto: 'Producto 4'}
+]
 
-let nompreProducto = cestoCompra.map(function (cestoCompra){
-  return cestoCompra.producto;
-});
-console.log(cestoCompra);
-console.log(nompreProducto);
+let nompreProducto = cestoCompra.map(function (cestoCompra) {
+  return cestoCompra.producto
+})
+console.log(cestoCompra)
+console.log(nompreProducto)
 
 let movil = {
   modelo: 'Camaro',
   motor: 'V4',
   año: 2016,
   marca: 'Ford'
-};
+}
 
 for (let auto in movil) {
-  console.log(`${auto} : ${movil[auto]}`);
+  console.log(`${auto} : ${movil[auto]}`)
 }
+*/
+
+// //////////////////////
+//  17  Window Object  //
+// //////////////////////
+
+console.log('============================= 17  Window Object =============================')
+
+let alto,
+  ancho,
+  ubicacion
+  /*
+  alto = window.outerHeight
+  ancho = window.outerWidth
+  console.log(`Navegador > alto ${alto} : ancho ${ancho}`)
+  alto = window.innerHeight
+  ancho = window.innerWidth
+  console.log(`Ventana > alto ${alto} : ancho ${ancho}`)
+  ubicacion = window.location
+  //  ubicacion = window.location.search  //  Devuelve el queryString luego de la Url
+  ubicacion = window.navigator
+  console.log(ubicacion)
+  ubicacion = window.navigator.appName
+  console.log(ubicacion)
+  ubicacion = window.navigator.appVersion
+  console.log(ubicacion)
+  ubicacion = window.navigator.userAgent
+  console.log(ubicacion)
+  ubicacion = window.navigator.language
+  console.log(ubicacion)
+  */
+
+// ///////////////////////////
+  //  18  Scope en Javascript //
+  // ///////////////////////////
+
+console.log('============================= 18  Scope en Javascript =============================')
+/*
+var a = 'a'
+let b = 'b'
+const c = 'c'
+
+//  Scope de la funcion
+function functionScope () {
+  var a = 'A' //  Vive dentro del bloque
+  let b = 'B' //  Vive dentro del bloque
+  const c = 'C' //  Vive dentro del bloque
+  console.log('FUNCION: ' + a, b, c)
+}
+functionScope()
+
+//  Scope de Bloque
+if (true) {
+  var a = 'AA' //  Sobreescribe la variable
+  let b = 'BB' //  Vive dentro del bloque
+  const c = 'CC' //  Vive dentro del bloque
+  console.log('BLOQUE: ' + a, b, c)
+}
+
+for (var a = 0; a < 10; a++) {
+  console.log(a)
+}
+for (let b = 0; b < 10; b++) {
+  console.log(b)
+}
+
+console.log('GLOBALES: ' + a, b, c)
+*/
