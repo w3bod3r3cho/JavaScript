@@ -77,7 +77,7 @@ encabezado.textContent = 'Curso de Victor'
 //  3   Seleccionando un elemento en Javascript
 //  ----------------------------------------------------------------------------------------------------
 console.log('----------------   3 Seleccionando un elemento en Javascript    ----------------')
-
+/*
 //  Query Selector
 const encabezadoId = document.querySelector('#encabezado')
 console.log(encabezadoId)
@@ -97,3 +97,29 @@ enlace = document.querySelector('#principal a:first-child');
 enlace = document.querySelector('#principal a:nth-child(3)');
 enlace = document.querySelector('#principal a:last-child');
 console.log(enlace)
+*/
+
+//  4   Seleccionando multiples elementos en JavaScript
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   4 Seleccionando multiples elementos en JavaScript    ----------------')
+
+let enlaces = document.getElementsByClassName('enlace'),
+enlace = enlaces[1]
+//  CSS
+enlace.style.background = '#333'
+enlace.textContent = 'Nuevo Enlace'
+//  console.log(enlaces);
+//  console.log(enlace);
+
+const listaEnlaces = document.querySelector('#principal').getElementsByClassName('enlace');
+//  console.log(listaEnlaces);
+
+const links = document.getElementsByTagName('a');
+links[18].style.color = 'red'
+
+let eLinks = Array.from(links);
+eLinks.forEach(element => {
+  console.log(element.textContent)
+});
+
+console.log(links)
