@@ -102,7 +102,7 @@ console.log(enlace)
 //  4   Seleccionando multiples elementos en JavaScript
 //  ----------------------------------------------------------------------------------------------------
 console.log('----------------   4 Seleccionando multiples elementos en JavaScript    ----------------')
-
+/*
 let enlaces = document.getElementsByClassName('enlace'),
 enlace = enlaces[1]
 //  CSS
@@ -123,3 +123,23 @@ eLinks.forEach(element => {
 });
 
 console.log(links)
+*/
+
+//  5   Seleccionando multiples elementos en JavaScript Parte 2
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   5 Seleccionando multiples elementos en JavaScript Parte 2    ----------------')
+/*
+let enlaces = document.querySelectorAll('#principal .enlace');
+enlaces = document.querySelectorAll('#principal a:nth-child(odd)');
+
+enlaces.forEach(element => {
+  element.style.background = '#333'
+});
+
+console.log(enlaces)
+*/
+
+//  6   Traversing en JavaScript
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   6 Traversing en JavaScript    ----------------')
+
