@@ -177,7 +177,7 @@ console.log(cursos[0].lastElementChild)
 console.log(cursos[0].lastChild)
 */
 //  2   Hijo al padre
-
+/*
 let enlaces = document.querySelectorAll('.enlace')
 console.log(enlaces)
 console.log(enlaces[0])
@@ -201,3 +201,81 @@ console.log(enlaces[0].nextElementSibling.nextElementSibling)
 console.log(enlaces[0].nextElementSibling.nextElementSibling.parentElement)
 console.log(enlaces[0].nextElementSibling.nextElementSibling.parentElement.children)
 console.log(enlaces[0].nextElementSibling.nextElementSibling.parentElement.children[4])
+*/
+//  7 Creando elementos con JavaScript
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   7 Creando elementos con JavaScript   ----------------')
+/*
+//  Crear enlace
+let enlace = document.createElement('a');
+//  Agregar una Clase
+enlace.className = 'enlace';
+//  Agregar Id
+enlace.id = 'nuevo-id'; 
+//  Agregar Atributo
+enlace.setAttribute('href', '#');
+//  Agregat Texto
+enlace.textContent = 'Nuevo Enlace';
+//  Agregar al HTML
+document.querySelector('#secundaria').appendChild(enlace)
+console.log(enlace);
+*/
+//  8 Reemplazando elementos con JavaScript
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   8 Reemplazando elementos con JavaScript   ----------------')
+/*
+//  Reemplazar elementos
+let nuevoElemento = document.createElement('h2');
+//  Agregar un Id
+nuevoElemento.id = 'encabezado';
+//  Agregar nuevo texto
+nuevoElemento.appendChild(document.createTextNode('Los Mejores Cursos Nuevo Hijo'));
+//  Elemento anterior (sera reemplazado)
+let anterior = document.querySelector('#encabezado');
+//  Elemento padre
+let padre = anterior.parentElement;
+//  Reemplazar
+padre.replaceChild(nuevoElemento, anterior)
+console.log(padre);
+console.log(anterior);
+console.log(nuevoElemento);
+*/
+//  9 Agregando y quitando clases y otros atributos
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   9 Agregando y quitando clases y otros atributos   ----------------')
+/*
+let enlaces = document.querySelectorAll('.enlace')
+let navegacion = document.querySelector('#principal')
+console.log(Array.from(document.querySelectorAll('.enlace')).length)
+navegacion.removeChild(enlaces[0])
+enlaces[1].remove()
+console.log(Array.from(document.querySelectorAll('.enlace')).length)
+console.log(enlaces)
+*/
+let 
+  primerLi = document.querySelector('.enlace'),
+  elemnto;
+
+elemento = primerLi.className;
+console.log(elemento);
+elemento = primerLi.classList.add('nueva-clase');
+elemento = primerLi.classList;
+console.log(elemento);
+elemento = primerLi.classList.remove('nueva-clase');
+elemento = primerLi.classList;
+console.log(elemento);
+elemento = primerLi.getAttribute('href');
+console.log(elemento);
+primerLi.setAttribute('href', 'http.google.com');
+elemento = primerLi.getAttribute('href');
+console.log(elemento);
+primerLi.setAttribute('data-id', 20);
+elemento = primerLi.getAttribute('data-id');
+console.log(elemento);
+elemento = primerLi.hasAttribute('data-id');
+console.log(elemento);
+elemento = primerLi.hasAttribute('data-algo');
+console.log(elemento);
+primerLi.removeAttribute('data-id');
+elemento = primerLi.hasAttribute('data-id');
+console.log(elemento);
