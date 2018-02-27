@@ -207,38 +207,38 @@ console.log(enlaces[0].nextElementSibling.nextElementSibling.parentElement.child
 console.log('----------------   7 Creando elementos con JavaScript   ----------------')
 /*
 //  Crear enlace
-let enlace = document.createElement('a');
+let enlace = document.createElement('a')
 //  Agregar una Clase
-enlace.className = 'enlace';
+enlace.className = 'enlace'
 //  Agregar Id
-enlace.id = 'nuevo-id'; 
+enlace.id = 'nuevo-id' 
 //  Agregar Atributo
-enlace.setAttribute('href', '#');
+enlace.setAttribute('href', '#')
 //  Agregat Texto
-enlace.textContent = 'Nuevo Enlace';
+enlace.textContent = 'Nuevo Enlace'
 //  Agregar al HTML
 document.querySelector('#secundaria').appendChild(enlace)
-console.log(enlace);
+console.log(enlace)
 */
 //  8 Reemplazando elementos con JavaScript
 //  ----------------------------------------------------------------------------------------------------
 console.log('----------------   8 Reemplazando elementos con JavaScript   ----------------')
 /*
 //  Reemplazar elementos
-let nuevoElemento = document.createElement('h2');
+let nuevoElemento = document.createElement('h2')
 //  Agregar un Id
-nuevoElemento.id = 'encabezado';
+nuevoElemento.id = 'encabezado'
 //  Agregar nuevo texto
-nuevoElemento.appendChild(document.createTextNode('Los Mejores Cursos Nuevo Hijo'));
+nuevoElemento.appendChild(document.createTextNode('Los Mejores Cursos Nuevo Hijo'))
 //  Elemento anterior (sera reemplazado)
-let anterior = document.querySelector('#encabezado');
+let anterior = document.querySelector('#encabezado')
 //  Elemento padre
-let padre = anterior.parentElement;
+let padre = anterior.parentElement
 //  Reemplazar
 padre.replaceChild(nuevoElemento, anterior)
-console.log(padre);
-console.log(anterior);
-console.log(nuevoElemento);
+console.log(padre)
+console.log(anterior)
+console.log(nuevoElemento)
 */
 //  9 Agregando y quitando clases y otros atributos
 //  ----------------------------------------------------------------------------------------------------
@@ -251,31 +251,32 @@ navegacion.removeChild(enlaces[0])
 enlaces[1].remove()
 console.log(Array.from(document.querySelectorAll('.enlace')).length)
 console.log(enlaces)
-*/
+
 let 
   primerLi = document.querySelector('.enlace'),
-  elemnto;
+  elemnto
 
-elemento = primerLi.className;
-console.log(elemento);
-elemento = primerLi.classList.add('nueva-clase');
-elemento = primerLi.classList;
-console.log(elemento);
-elemento = primerLi.classList.remove('nueva-clase');
-elemento = primerLi.classList;
-console.log(elemento);
-elemento = primerLi.getAttribute('href');
-console.log(elemento);
-primerLi.setAttribute('href', 'http.google.com');
-elemento = primerLi.getAttribute('href');
-console.log(elemento);
-primerLi.setAttribute('data-id', 20);
-elemento = primerLi.getAttribute('data-id');
-console.log(elemento);
-elemento = primerLi.hasAttribute('data-id');
-console.log(elemento);
-elemento = primerLi.hasAttribute('data-algo');
-console.log(elemento);
-primerLi.removeAttribute('data-id');
-elemento = primerLi.hasAttribute('data-id');
-console.log(elemento);
+elemento = primerLi.className
+console.log(elemento)
+elemento = primerLi.classList.add('nueva-clase')
+elemento = primerLi.classList
+console.log(elemento)
+elemento = primerLi.classList.remove('nueva-clase')
+elemento = primerLi.classList
+console.log(elemento)
+elemento = primerLi.getAttribute('href')
+console.log(elemento)
+primerLi.setAttribute('href', 'http.google.com')
+elemento = primerLi.getAttribute('href')
+console.log(elemento)
+primerLi.setAttribute('data-id', 20)
+elemento = primerLi.getAttribute('data-id')
+console.log(elemento)
+elemento = primerLi.hasAttribute('data-id')
+console.log(elemento)
+elemento = primerLi.hasAttribute('data-algo')
+console.log(elemento)
+primerLi.removeAttribute('data-id')
+elemento = primerLi.hasAttribute('data-id')
+console.log(elemento)
+*/
