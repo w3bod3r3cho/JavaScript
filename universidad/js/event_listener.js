@@ -49,9 +49,96 @@ let
 //  boton.addEventListener('mouseup', obtenerEvento)
 //  Mouse Move
 //  boton.addEventListener('mousemove', obtenerEvento)
-encabezado.addEventListener('mousemove', obtenerEvento)
+//  encabezado.addEventListener('mousemove', obtenerEvento)
 
+//function obtenerEvento(event) {
+//  console.log(`Evento ${event.type}`);
+//}
+
+//  3 Eventos para los Inputs
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   3 Eventos para los Inputs   ----------------')
+
+//const busqueda = document.querySelector('#buscador');
+
+// busqueda.addEventListener('keydown', obtenerEvento)
+// busqueda.addEventListener('keyup', obtenerEvento)
+// busqueda.addEventListener('keypress', obtenerEvento)
+// busqueda.addEventListener('focus', obtenerEvento)
+// busqueda.addEventListener('blur', obtenerEvento)
+// busqueda.addEventListener('cut', obtenerEvento)
+// busqueda.addEventListener('copy', obtenerEvento)
+// busqueda.addEventListener('paste', obtenerEvento)
+// busqueda.addEventListener('input', obtenerEvento)
+// DISPONIBLE EN LOS SELECT
+// busqueda.addEventListener('change', obtenerEvento)
+/*
 function obtenerEvento(event) {
+  // console.log(busqueda.value);
+  // document.querySelector('#encabezado').innerHTML = busqueda.value;
   console.log(`Evento ${event.type}`);
 }
+*/
+//  4 Event Bubbling
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   4 Event Bubbling   ----------------')
 
+const card = document.querySelector('.card');
+const infoCurso = document.querySelector('.info-card');
+const agregarCarrito = document.querySelector('.agregar-carrito');
+
+card.addEventListener('click', function (){
+  console.log('Click en Card');
+});
+
+infoCurso.addEventListener('click', function (){
+  console.log('Click en info Curso');
+});
+
+agregarCarrito.addEventListener('click', function (e){
+  console.log('Click en agregar Carrito');
+  e.stopPropagation();
+});
+
+//  Seccion 5 Delegation
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   Seccion 5 Delegation   ----------------')
+/*
+document.body.addEventListener('click', eliminarElemento);
+
+function eliminarElemento (e) {
+  e.preventDefault();
+
+  //console.log('click');
+
+  //console.log(e.target.classList);
+  
+  if (e.target.classList.contains('borrar-curso')) {
+    console.log('Si!');
+  }
+  else {
+    console.log('No!');
+  }
+  
+  if (e.target.classList.contains('borrar-curso')) {
+    console.log(e.target.parentElement);
+    console.log(e.target.parentElement.parentElement);
+    console.log(e.target.parentElement.parentElement.remove());
+  }
+  if (e.target.classList.contains('agregar-carrito')) {
+    console.log('curso agregado');
+  }
+}
+*/
+//  6 Local y Session Storage
+//  ----------------------------------------------------------------------------------------------------
+console.log('----------------   6 Local y Session Storage   ----------------')
+
+localStorage.setItem('nombre', 'Juan');
+sessionStorage.setItem('nombre', 'Juan');
+
+const nombre = localStorage.getItem('nombre');
+
+localStorage.removeItem('nombre');
+localStorage.clear();
+sessionStorage.removeItem('nombre');
