@@ -100,9 +100,9 @@ agregarCarrito.addEventListener('click', function (e){
   e.stopPropagation();
 });
 
-//  Seccion 5 Delegation
+//  5 Delegation
 //  ----------------------------------------------------------------------------------------------------
-console.log('----------------   Seccion 5 Delegation   ----------------')
+console.log('----------------   5 Delegation   ----------------')
 /*
 document.body.addEventListener('click', eliminarElemento);
 
@@ -130,9 +130,9 @@ function eliminarElemento (e) {
   }
 }
 */
-//  6 Local y Session Storage
+//  Seccion 4 Local y Session Storage
 //  ----------------------------------------------------------------------------------------------------
-console.log('----------------   6 Local y Session Storage   ----------------')
+console.log('----------------   Seccion 4 Local y Session Storage   ----------------')
 
 localStorage.setItem('nombre', 'Juan');
 sessionStorage.setItem('nombre', 'Juan');
