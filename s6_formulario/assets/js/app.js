@@ -69,16 +69,6 @@ function obtenerTweetsLocalStorage() {
     return tweets;
 }
 
-function borrarTweet(e) {
-    e.preventDefault();
-
-    if (e.target.className === 'borrar-tweet') {
-        console.log(e.target.parentElement.remove());
-    }
-
-    console.log('click');
-}
-
 function localStorageListo() {
     let tweets;
 
@@ -94,4 +84,30 @@ function localStorageListo() {
         li.appendChild(botonBorrar);
         listaTweets.appendChild(li);
     });
+}
+
+function borrarTweet(e) {
+    e.preventDefault();
+
+    if (e.target.className === 'borrar-tweet') {
+        e.target.parentElement.remove();
+        borrarTweetLocalStorage(e.target.parentElement.innerText);
+    }
+}
+
+function borrarTweetLocalStorage(tweet) {
+    let tweets, tweetBorrar;
+    
+    // Elimina la X del tweet
+    tweetBorrar = tweet.substring(0, tweet.length - 1);
+
+    tweets = obtenerTweetsLocalStorage();
+
+    tweets.forEach(function(tweet, index) {
+        if (tweetBorrar === tweet) {
+            tweets.splice(index, 1);            
+        }
+    });
+
+    localStorage.setItem('tweets', JSON.stringify(tweets));
 }
