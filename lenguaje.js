@@ -251,8 +251,31 @@ const cars = [
   {modelo: 'Dodge', motor: 3.0},
   {modelo: 'Nissan', motor: 4.0},
   {modelo: 'Ford', motor: 6.0}
-]
+];
 /*
+var items = [
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic' },
+  { name: 'Zeros', value: 37 }
+];
+console.log(items);
+
+items.sort(function (a, b) {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+  // a must be equal to b
+  return 0;
+});
+
+console.log(items);
+
 console.log(cars)
 
 for (var i = 0; i < cars.length; i++) {

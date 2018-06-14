@@ -1,22 +1,46 @@
 class Poligono {
 
-    numLados = 4;
-
-    constructor(x, y) {
+    /**
+   * @param {number} x
+   * @param {number} y
+   * @param {string} numLados
+   */
+    constructor(x, y, numLados) {
         this.x = x;
         this.y = y;
+        this.numLados = numLados;
     }
 
     imprimirPosicion() {
         console.log(`La Posicion es: x = ${this.x} & y = ${this.y}`);
     }
 
+    imprimirPoligono() {
+
+        let clasePoligono;
+
+        switch (this.numLados) {
+            case "3":
+                clasePoligono = "Triangulo";
+                break;
+            case "4":
+                clasePoligono = "Cuadrado";
+                break;
+            case "5":
+                clasePoligono = "Pentagono";
+                break;
+            default:
+                clasePoligono = "Otro tipo"
+                break;
+        }
+
+        return clasePoligono;
+    }
+
     static ladosPoligono() {
-        console.log(`Numero de lados: ${this.numLados}`);
+        console.log(`Static 2 * 2 = ${2 * 2}`);
     }
 }
-var p = new Poligono(10, 20);
-const keys = Object.keys(p);
-console.log(p);
-p.imprimirPosicion();
-Poligono.ladosPoligono();
+
+export { Poligono };
+// export default Poligono;
